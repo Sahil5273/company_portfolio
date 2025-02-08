@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Global Solutions - Skill Development</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="icon" href="html_finalprojimages/comp.jpg" type="image/png" sizes="16x16">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="company_name">
+         Global Solutions
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="Email"/>
+            gsol.contact@gmail.com
+          </div>
+          <div style="clear:both;"></div>
+          <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="Phone"/>
+            +91 9122147098
+          </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-us">About Us</a>
+          <a class="topmenu" href="#services">Our Services</a>
+          <a class="topmenu" href="#training">Training Programs</a>
+          <a class="topmenu" href="#testimonials">Testimonials</a>
+          <a class="topmenu" href="#contact">Contact Us</a>
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Us -->
+    <section id="about-us" class="container">
+      <div>
+        <img src="html_finalprojimages/comp.jpg" class="company_image"/>
+      </div>
+      <div>
+          <h1>
+            Welcome to Global Solutions! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            Global Solutions is a leading **skill development and training company** dedicated to empowering individuals with **essential industry skills**. 
+            Our mission is to bridge the skill gap by providing **practical, hands-on training** in technology, communication, and professional development.
+          </p>
+      </div>
+    </section>
+              
+    <!-- Our Services -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div style="clear:both;"></div>
+      <div class="all_services">
+        <div class="service">
+          <img src="html_finalprojimages/training.png"/>
+          <h6>Skill Development</h6>
+          <p>Comprehensive training programs to enhance career prospects.</p>
+        </div>  
+
+        <div class="service">
+          <img src="html_finalprojimages/certificate.png"/>
+          <h6>Certifications</h6>
+          <p>Industry-recognized certifications for job readiness.</p>
+        </div>  
+
+        <div class="service">
+            <img src="html_finalprojimages/analysis.png"/>
+            <h6>Corporate Training</h6>
+            <p>Customized training solutions for businesses and organizations.</p>
+        </div>  
+      </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section class="training" id="training">
+      <h2>Our Training Programs</h2>
+      <div style="clear:both;"></div>
+
+        <div id="training-container" class="training-container">
+          <div class="training-card">
+            <h3>Professional Communication</h3>
+            <ul>
+              <li>Enhance English and business communication skills with interactive learning.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="training-card">
+            <h3>Computer Literacy</h3>
+            <ul>
+              <li>Master the fundamentals of **MS Office, programming basics, and IT security**.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="training-card">
+            <h3>Web Development Bootcamp</h3>
+            <ul>
+              <li>Hands-on training in **HTML, CSS, JavaScript, and Python** for website creation.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2>What Our Learners Say</h2>
+      <div style="clear:both;"></div>
+      <div class="all_testimonials" id="all_testimonials">
+        <div class="testimonial">
+          <span>&#8220;</span>
+          The training at Global Solutions transformed my career. Their hands-on approach helped me land my dream job in IT!
+          <span>&#8221;</span>
+        </div>
+        <div class="testimonial">
+          <span>&#8220;</span>
+          Excellent learning environment! The trainers are knowledgeable, and the content is industry-relevant. Highly recommended!
+          <span>&#8221;</span>
+        </div>
+        <div class="testimonial">
+          <span>&#8220;</span>
+          Global Solutions provided the best corporate training for our team. Productivity has increased, and skills have improved significantly.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <div class="flex_center">
+          <fieldset>
+              <legend class="introduction">Contact Us</legend>          
+              <input type="text" id="contact_name" placeholder="Your Name"> <br/>
+              <input type="email" id="contact_email" placeholder="Your Email"> <br/>
+              <input type="text" id="contact_subject" placeholder="Subject"> <br/>
+              <textarea id="contact_message" cols="500" rows="5" placeholder="Your Message"></textarea>
+              <div class="flex_center">
+                  <button id="contact_btn">Submit</button>
+              </div>
+          </fieldset>
+      </div>
+  </section>
+  
+  <div class="iconbutton">
+      <a href="#home">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+      </a>
+  </div>
+  
+  <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>Thank you for reaching out!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+  </div>
+  </body>
+
+  <script>
+    document.getElementById("contact_btn").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get input field values
+        let name = document.getElementById("contact_name").value.trim();
+        let email = document.getElementById("contact_email").value.trim();
+        let subject = document.getElementById("contact_subject").value.trim();
+        let message = document.getElementById("contact_message").value.trim();
+
+        // Validate input fields
+        if (name === "" || email === "" || subject === "" || message === "") {
+            alert("Please fill out all fields before submitting.");
+        } else {
+            // Construct the mailto URL for Gmail
+            let mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=gsol.contact@gmail.com&su=${encodeURIComponent(subject)}&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0ASubject:%20${encodeURIComponent(subject)}%0AMessage:%20${encodeURIComponent(message)}`;
+
+            // Open Gmail in a new tab
+            window.open(mailtoLink, "_blank");
+
+            // Clear the form after submission
+            document.getElementById("contact_name").value = "";
+            document.getElementById("contact_email").value = "";
+            document.getElementById("contact_subject").value = "";
+            document.getElementById("contact_message").value = "";
+        }
+    });
+
+    function showPopup(visible) {
+        let popup = document.getElementById('popup');
+        popup.style.display = visible ? 'block' : 'none';
+    }
+</script>
+</html>
