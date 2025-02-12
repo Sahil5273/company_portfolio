@@ -85,6 +85,7 @@ h2 {
   color: gray;
   line-height: 1.5;
 }
+
 #connect {
   text-align: left;
   padding: 30px 20px;
@@ -104,16 +105,11 @@ h2 {
   font-size: 18px;
   color: #3AA6B9;
 }
+
 .contact_info img {
   width: 25px;
   background-color: #3AA6B9;
 }
-
-.contact_info img {
-  width: 25px;
-  filter: none; /* Ensures icons remain visible */
-}
-
 
 /* Services Section */
 .all_services {
@@ -272,6 +268,7 @@ button:hover {
 .popup button {
   margin-top: 10px;
 }
+
 /* Responsive Design for Different Screen Sizes */
 
 /* Medium Screens (Tablets, 768px and below) */
@@ -280,11 +277,11 @@ button:hover {
       flex-direction: column;
       text-align: center;
       padding: 30px;
-      width: 95%;
+      width: 90%;
   }
 
   .company_image {
-      width: 100%;
+      width: 90%;
       margin-bottom: 20px;
   }
 
@@ -311,17 +308,28 @@ button:hover {
   }
 
   .service, .training-card, .testimonial {
-      width: 100%;
+      width: 90%;
       margin: 15px auto;
       padding: 20px;
   }
 
   fieldset {
-      width: 95%;
+      width: 90%;
       padding: 20px;
   }
-}
 
+  h2 {
+      font-size: 36px;
+  }
+
+  #about-us h1 {
+      font-size: 40px;
+  }
+
+  #about-us p {
+      font-size: 18px;
+  }
+}
 /* Small Screens (Mobile Phones, 480px and below) */
 @media screen and (max-width: 480px) {
   #home {
@@ -331,7 +339,7 @@ button:hover {
   }
 
   .company_name {
-      font-size: 24px;
+      font-size: 28px;
   }
 
   .contact_info {
@@ -339,11 +347,11 @@ button:hover {
   }
 
   h1 {
-      font-size: 30px;
+      font-size: 32px;
   }
 
   h2 {
-      font-size: 26px;
+      font-size: 28px;
       margin: 20px;
   }
 
@@ -352,19 +360,19 @@ button:hover {
   }
 
   .topdiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-  }
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 
   .topmenu {
       font-size: 16px;
       padding: 12px;
       text-align: center;
-      width: auto;
+      flex: 1;
+      min-width: 80px;
   }
 
   .service, .training-card, .testimonial {
@@ -388,5 +396,25 @@ button:hover {
       height: 50px;
       bottom: 15px;
       right: 15px;
+  }
+
+  .container {
+      padding: 20px;
+  }
+
+  #about-us h1 {
+      font-size: 36px;
+  }
+
+  #about-us p {
+      font-size: 16px;
+  }
+
+  .training-card h3 {
+      font-size: 20px;
+  }
+
+  .testimonial {
+      font-size: 14px;
   }
 }
